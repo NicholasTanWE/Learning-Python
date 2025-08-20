@@ -37,6 +37,7 @@ while True:
             print("You now have the golden key.")
             item_locations["golden key"]="n/a"
             items_held.append("golden key")
+            got_key=True
         else:
             print("There is no golden key here.")
     elif user_command=="drop key":
@@ -44,6 +45,7 @@ while True:
             print("You have dropped the key.")
             items_held.remove("golden key")
             item_locations["golden key"]=player_position
+            got_key=False
         else:
             print("You do not have the key.")
     elif user_command=="e": #move east logic
